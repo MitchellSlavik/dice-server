@@ -1,0 +1,36 @@
+{
+  "name": "dice-server",
+  "version": "1.0.0",
+  "description": "",
+  "files": ["dist"],
+  "type": "module",
+  "main": "./dist/dice-server.umd.js",
+  "module": "./dist/dice-server.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/dice-server.es.js",
+      "require": "./dist/dice-server.umd.js"
+    }
+  },
+  "scripts": {
+    "start:server": "npx tsx ./example/server.ts",
+    "start:client": "npx tsx ./example/client.ts",
+    "lint": "eslint .",
+    "tsc": "tsc .",
+    "build": "node build.js"
+  },
+  "author": "Mitchell Slavik",
+  "license": "MIT",
+  "dependencies": {
+    "inquirer": "^9.2.16",
+    "nanoid": "^5.0.6",
+    "ws": "^8.16.0"
+  },
+  "devDependencies": {
+    "@types/inquirer": "^9.0.7",
+    "@types/ws": "^8.5.10",
+    "eslint": "^8.57.0",
+    "typescript": "^5.4.3",
+    "vite": "^5.2.6"
+  }
+}
